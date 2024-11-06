@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "Sentry"
-  s.version      = "8.39.1"
+  s.version      = "8.39.2"
   s.summary      = "Sentry client for cocoa"
   s.homepage     = "https://github.com/getsentry/sentry-cocoa"
   s.license      = "mit"
   s.authors      = "Sentry"
-  s.source       = { :git => "https://github.com/getsentry/sentry-cocoa.git",
+  s.source       = { :git => "https://github.com/iStig/sentry-cocoa.git",
                      :tag => s.version.to_s }
 
   s.ios.deployment_target = "10.0"
