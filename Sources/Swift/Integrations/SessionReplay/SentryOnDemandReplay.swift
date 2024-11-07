@@ -241,7 +241,21 @@ class SentryOnDemandReplay: NSObject, SentryReplayVideoMaker {
     }
     
     private func createVideoSettings(width: CGFloat, height: CGFloat) -> [String: Any] {
-        return nil
+//        let data: [String: Any] = [
+//            "name": "John Doe"
+//        ]
+//        return data
+        
+        return [
+            AVVideoCodecKey: "avc1",
+            AVVideoWidthKey: width,
+            AVVideoHeightKey: height,
+            AVVideoCompressionPropertiesKey: [
+                AVVideoAverageBitRateKey: bitRate,
+                AVVideoProfileLevelKey: AVVideoProfileLevelH264BaselineAutoLevel
+            ] as [String: Any]
+        ]
+        
 //        return [
 //            AVVideoCodecKey: AVVideoCodecType.h264,
 //            AVVideoWidthKey: width,
